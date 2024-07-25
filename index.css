@@ -1,0 +1,213 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+.header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+    position: relative;
+}
+
+.back-button {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: white;
+    background-color:rgb(0, 125, 0);
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.back-button:hover {
+    background-color:greenyellow;
+}
+
+.instruction {
+    color: #2980b9;
+    text-align: center;
+    margin: 20px 0;
+    font-size: 1.1em;
+}
+
+.main-content {
+    display: flex;
+    gap: 20px;
+}
+
+.lessons {
+    flex: 1;
+}
+
+.lessons h2 {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    color: #2c3e50;
+}
+
+.lessons ul {
+    list-style: none;
+    padding: 0;
+}
+
+.lessons li {
+    background: #ecf0f1;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #bdc3c7;
+    transition: background-color 0.3s, border-color 0.3s;
+    cursor: pointer;
+}
+
+.lessons li:hover {
+    background-color: #bdc3c7;
+    border-color: #7f8c8d;
+}
+
+.video-section {
+    flex: 2;
+    background: #ecf0f1;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #bdc3c7;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.video-section h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #2c3e50;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75%;
+}
+
+.video-container iframe {
+    width: 80%;
+    height: 250px;
+    border:#3498db;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+@keyframes headerBackgroundChange {
+    0% {
+        background-color: skyblue;
+    }
+
+    25% {
+        background-color: lightcoral;
+    }
+
+    50% {
+        background-color: lightgoldenrodyellow;
+    }
+
+    75% {
+        background-color: lightgreen;
+    }
+
+    100% {
+        background-color: lightseagreen;
+    }
+}
+
+
+@keyframes headerTextColorChange {
+    0% {
+        color: darkred;
+    }
+
+    25% {
+        color: lightgrey;
+    }
+
+    50% {
+        color: black;
+    }
+
+    75% {
+        color: darkblue;
+    }
+
+    100% {
+        color: yellow;
+    }
+}
+
+@keyframes buttonColorChange {
+    0% {
+        background-color: darkslategray;
+    }
+
+    50% {
+        background-color: teal;
+    }
+
+    100% {
+        background-color: darkcyan;
+    }
+}
+
+@media (max-width: 750px) {
+    .main-content {
+        flex-direction: column;
+    }
+
+    .video-section {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 10px;
+    }
+
+    .back-button {
+        padding: 10px 10px;
+        font-size: 15px;
+       
+    }
+
+    .instruction {
+        font-size: 14px;
+    }
+
+    .lessons li {
+        font-size: 14px;
+    }
+
+    .lessons h2, .video-section h2 {
+        font-size: 1.2em;
+    }
+}
